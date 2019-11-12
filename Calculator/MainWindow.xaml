@@ -45,7 +45,13 @@
         </Button>
         <Button x:Name="btnC" Grid.Row="2" Grid.Column="3" Click="BtnC_Click" FontSize="30">c</Button>
         <Button x:Name="btnBack" Grid.Row="2" Grid.Column="4" Click="BtnBack_Click" FontSize="30">⌫</Button>
-        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15" Grid.ColumnSpan="2" Margin="0,67,0.2,0.4" Grid.RowSpan="2">Clear   history</Button>
+        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15">
+            <TextBlock>Clear<LineBreak/>History</TextBlock>
+        </Button>
+        <Button x:Name="btnSqrt" Grid.Row="6" Grid.Column="1" Click="BtnSqrt_Click" FontSize="30">√</Button>
+        <Button x:Name="btnSquare" Grid.Row="5" Grid.Column="1" Click="BtnSquare_Click" FontSize="30" >²</Button>
+        <Button x:Name="btnPrct" Grid.Row="6" Grid.Column="0" Click="BtnPrct_Click" FontSize="20">%</Button>
+
 
         <Button x:Name="btnDiv" Grid.Row="2" Grid.Column="5" Click="BtnDiv_Click" FontSize="50">÷</Button>
         <Button x:Name="btnMul" Grid.Row="3" Grid.Column="5" Click="BtnMul_Click" FontSize="40">x</Button>
@@ -61,8 +67,8 @@
         <TextBox x:Name="TopDisplay" IsReadOnly="True"  TextAlignment="Right" VerticalAlignment="Bottom" FontSize="20" BorderThickness="0"
                      Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Background="AliceBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned"></TextBox>
 
-        <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="3"
-                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="7" Background="AliceBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned" Height="400"></TextBox>
+        <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="2"
+                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Background="LightBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned" Height="335"></TextBox>
 
     </Grid>
 

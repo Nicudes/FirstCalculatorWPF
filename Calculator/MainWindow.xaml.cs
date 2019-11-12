@@ -219,6 +219,11 @@ namespace Calculator
                 TopDisplay.Text += "0";
 
             }
+            if (decimal.Parse(txtDisplay.Text) == 0)
+            {
+                txtDisplay.Text = "0";
+                TopDisplay.Text = "0";
+            }
 
 
 
@@ -422,15 +427,24 @@ namespace Calculator
         private void BtnCom_Click(object sender, RoutedEventArgs e)
         {
             
-            txtDisplay.Text += ",";
-            TopDisplay.Text += ",";
-            if (txtDisplay == null)
+           
+            if (txtDisplay.Text == "")
             {
 
                 txtDisplay.Text += "0,";
                 TopDisplay.Text += "0,";
             }
+            if (txtDisplay.Text.Contains(","))
+            {
+            }
 
+            else
+            {
+                txtDisplay.Text += ",";
+                TopDisplay.Text += ",";
+
+            }
+            
         }
 
         private void BtnPosNeg_Click(object sender, RoutedEventArgs e)
@@ -475,6 +489,42 @@ namespace Calculator
         private void BtnClearHistory_Clck(object sender, RoutedEventArgs e)
         {
             txtHistory.Text = "";
+        }
+
+        private void BtnSqrt_Click(object sender, RoutedEventArgs e)
+        {
+           double x = double.Parse(txtDisplay.Text);
+           x =  Math.Sqrt(x);
+
+            txtDisplay.Text = x.ToString();
+            TopDisplay.Text = x.ToString();
+
+            txtHistory.Text += "√" + x.ToString() + " = " + txtDisplay.Text;
+            txtHistory.Text += "\n";
+        }
+
+        private void BtnSquare_Click(object sender, RoutedEventArgs e)
+        {
+            double x = double.Parse(txtDisplay.Text);
+            x = x * x;
+
+            txtDisplay.Text = x.ToString();
+            TopDisplay.Text = x.ToString();
+
+            txtHistory.Text +=  x.ToString() + "² = " + txtDisplay.Text;
+            txtHistory.Text += "\n";
+        }
+
+        private void BtnPrct_Click(object sender, RoutedEventArgs e)
+        {
+            double x = double.Parse(txtDisplay.Text);
+
+            x = x / 100;
+            txtDisplay.Text = x.ToString();
+            TopDisplay.Text = x.ToString();
+
+            txtHistory.Text += x.ToString() + "% = " + txtDisplay.Text;
+            txtHistory.Text += "\n";
         }
     }
 }
