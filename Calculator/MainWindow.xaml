@@ -117,7 +117,7 @@
                 </LinearGradientBrush>
             </Button.Background></Button>
 
-        <Button x:Name="btnCE" Grid.Row="2" Grid.Column="2" Click="BtnCE_Click" FontSize="15" >
+        <Button x:Name="btnCE" Grid.Row="2" Grid.Column="2" Click="BtnCE_Click" FontSize="15"  Style="{DynamicResource RoundedButton}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -126,8 +126,8 @@
             </Button.Background>
             <TextBlock>Clear<LineBreak/>entry</TextBlock>
         </Button>
-        
-        <Button x:Name="btnC" Grid.Row="2" Grid.Column="3" Click="BtnC_Click" FontSize="30">c
+
+        <Button x:Name="btnC" Grid.Row="2" Grid.Column="3" Click="BtnC_Click" FontSize="30" Style="{DynamicResource RoundedButton}">c
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -135,8 +135,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
-        <Button x:Name="btnBack" Grid.Row="2" Grid.Column="4" Click="BtnBack_Click" FontSize="30">⌫
+
+        <Button x:Name="btnBack" Grid.Row="2" Grid.Column="4" Click="BtnBack_Click" FontSize="30" Style="{DynamicResource RoundedButton}">⌫
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -144,8 +144,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
-        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15">
+
+        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15" Style="{DynamicResource RoundedButton}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -155,7 +155,7 @@
             <TextBlock>Clear<LineBreak/>History
             </TextBlock>
         </Button>
-        <Button x:Name="btnSqrt" Grid.Row="6" Grid.Column="1" Click="BtnSqrt_Click" FontSize="30">√
+        <Button x:Name="btnSqrt" Grid.Row="6" Grid.Column="1" Click="BtnSqrt_Click" FontSize="30" Style="{DynamicResource RoundedButton}">√
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -163,8 +163,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-       
-        <Button x:Name="btnSquare" Grid.Row="5" Grid.Column="1" Click="BtnSquare_Click" FontSize="30" >²
+
+        <Button x:Name="btnSquare" Grid.Row="5" Grid.Column="1" Click="BtnSquare_Click" FontSize="30" Style="{DynamicResource RoundedButton}" >²
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -172,8 +172,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        
-        <Button x:Name="btnPrct" Grid.Row="6" Grid.Column="0" Click="BtnPrct_Click" FontSize="20">%
+
+        <Button x:Name="btnPrct" Grid.Row="6" Grid.Column="0" Click="BtnPrct_Click" FontSize="20" Style="{DynamicResource RoundedButton}">%
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -183,16 +183,7 @@
         </Button>
 
 
-        <Button x:Name="btnDiv" Grid.Row="2" Grid.Column="5" Click="BtnDiv_Click" FontSize="50">÷
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Pink" Offset="0"/>
-                    <GradientStop Color="PaleGoldenrod" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        
-        <Button x:Name="btnMul" Grid.Row="3" Grid.Column="5" Click="BtnMul_Click" FontSize="40">x
+        <Button x:Name="btnDiv" Grid.Row="2" Grid.Column="5" Click="BtnDiv_Click" FontSize="50" Style="{DynamicResource RoundedButton}">÷
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -201,7 +192,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnSub" Grid.Row="4" Grid.Column="5" Click="BtnSub_Click" FontSize="50">-
+        <Button x:Name="btnMul" Grid.Row="3" Grid.Column="5" Click="BtnMul_Click" FontSize="40" Style="{DynamicResource RoundedButton}">x
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -210,7 +201,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnPlus" Grid.Row="5" Grid.Column="5" Click="BtnPlus_Click" FontSize="50">+
+        <Button x:Name="btnSub" Grid.Row="4" Grid.Column="5" Click="BtnSub_Click" FontSize="50" Style="{DynamicResource RoundedButton}">-
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -219,7 +210,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnEqu" Grid.Row="6" Grid.Column="5" Click="BtnEqu_Click" FontSize="50">=
+        <Button x:Name="btnPlus" Grid.Row="5" Grid.Column="5" Click="BtnPlus_Click" FontSize="50" Style="{DynamicResource RoundedButton}">+
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -228,7 +219,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnCom" Grid.Row="6" Grid.Column="4" Click="BtnCom_Click" FontSize="30">,
+        <Button x:Name="btnEqu" Grid.Row="6" Grid.Column="5" Click="BtnEqu_Click" FontSize="50" Style="{DynamicResource RoundedButton}">=
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -237,7 +228,16 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="btnPosNeg" Grid.Row="6" Grid.Column="2" Click="BtnPosNeg_Click" FontSize="30">+/-
+        <Button x:Name="btnCom" Grid.Row="6" Grid.Column="4" Click="BtnCom_Click" FontSize="30" Style="{DynamicResource RoundedButton}">,
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="PaleGoldenrod" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnPosNeg" Grid.Row="6" Grid.Column="2" Click="BtnPosNeg_Click" FontSize="30" Style="{DynamicResource RoundedButton}">+/-
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Pink" Offset="0"/>
@@ -257,8 +257,8 @@
 
 
         <Expander ExpandDirection="Down" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" IsExpanded="True">
-            <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="4" Width="130" BorderBrush="Black"
-                      Background="Pink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned" Height="315"></TextBox>
+            <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="4" Width="125" BorderBrush="Black"
+                      Background="Pink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned" Height="309"></TextBox>
         </Expander>
         
     </Grid>
