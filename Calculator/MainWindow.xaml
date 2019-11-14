@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="350">
+        Title="               SupermegaCalculator" Height="500" Width="400">
 
-    <Grid Background="AliceBlue">
+
+    <Grid Background="Pink">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -27,49 +28,239 @@
         </Grid.RowDefinitions>
 
 
-        <Button x:Name="btn7" Grid.Row="3" Grid.Column="2" Click="Btn7_Click" FontSize="30">7</Button>
-        <Button x:Name="btn8" Grid.Row="3" Grid.Column="3" Click="Btn8_Click" FontSize="30">8</Button>
-        <Button x:Name="btn9" Grid.Row="3" Grid.Column="4" Click="Btn9_Click" FontSize="30">9</Button>
+        <Button x:Name="btn7" Grid.Row="3" Grid.Column="2" Click="Btn7_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            7</Button>
 
-        <Button x:Name="btn4" Grid.Row="4" Grid.Column="2" Click="Btn4_Click" FontSize="30">4</Button>
-        <Button x:Name="btn5" Grid.Row="4" Grid.Column="3" Click="Btn5_Click" FontSize="30">5</Button>
-        <Button x:Name="btn6" Grid.Row="4" Grid.Column="4" Click="Btn6_Click" FontSize="30">6</Button>
+        <Button x:Name="btn8" Grid.Row="3" Grid.Column="3" Click="Btn8_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            8</Button>
 
-        <Button x:Name="btn1" Grid.Row="5" Grid.Column="2" Click="Btn1_Click" FontSize="30">1</Button>
-        <Button x:Name="btn2" Grid.Row="5" Grid.Column="3" Click="Btn2_Click" FontSize="30">2</Button>
-        <Button x:Name="btn3" Grid.Row="5" Grid.Column="4" Click="Btn3_Click" FontSize="30" Margin="0,0,0.4,0.2">3</Button>
-        <Button x:Name="btn0" Grid.Row="6" Grid.Column="3" Click="Btn0_Click" FontSize="30">0</Button>
 
-        <Button x:Name="btnCE" Grid.Row="2" Grid.Column="2" Click="BtnCE_Click" FontSize="15">
+        <Button x:Name="btn9" Grid.Row="3" Grid.Column="4" Click="Btn9_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+           9</Button>
+
+        <Button x:Name="btn4" Grid.Row="4" Grid.Column="2" Click="Btn4_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>            </Button.Background>
+          4</Button>
+
+        <Button x:Name="btn5" Grid.Row="4" Grid.Column="3" Click="Btn5_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+           5 </Button>
+
+        <Button x:Name="btn6" Grid.Row="4" Grid.Column="4" Click="Btn6_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+           6</Button>
+
+        <Button x:Name="btn1" Grid.Row="5" Grid.Column="2" Click="Btn1_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            1</Button>
+
+        <Button x:Name="btn2" Grid.Row="5" Grid.Column="3" Click="Btn2_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>  
+            2</Button>
+
+        <Button x:Name="btn3" Grid.Row="5" Grid.Column="4" Click="Btn3_Click" FontSize="30" Style="{DynamicResource RoundedButton}">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            3 </Button>
+        
+        <Button x:Name="btn0" Grid.Row="6" Grid.Column="3" Click="Btn0_Click" FontSize="30" Style="{DynamicResource RoundedButton}">0
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background></Button>
+
+        <Button x:Name="btnCE" Grid.Row="2" Grid.Column="2" Click="BtnCE_Click" FontSize="15" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
             <TextBlock>Clear<LineBreak/>entry</TextBlock>
         </Button>
-        <Button x:Name="btnC" Grid.Row="2" Grid.Column="3" Click="BtnC_Click" FontSize="30">c</Button>
-        <Button x:Name="btnBack" Grid.Row="2" Grid.Column="4" Click="BtnBack_Click" FontSize="30">⌫</Button>
-        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15">
-            <TextBlock>Clear<LineBreak/>History</TextBlock>
+        
+        <Button x:Name="btnC" Grid.Row="2" Grid.Column="3" Click="BtnC_Click" FontSize="30">c
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
-        <Button x:Name="btnSqrt" Grid.Row="6" Grid.Column="1" Click="BtnSqrt_Click" FontSize="30">√</Button>
-        <Button x:Name="btnSquare" Grid.Row="5" Grid.Column="1" Click="BtnSquare_Click" FontSize="30" >²</Button>
-        <Button x:Name="btnPrct" Grid.Row="6" Grid.Column="0" Click="BtnPrct_Click" FontSize="20">%</Button>
+        
+        <Button x:Name="btnBack" Grid.Row="2" Grid.Column="4" Click="BtnBack_Click" FontSize="30">⌫
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="btnClrHistory" Grid.Row="5" Grid.Column="0" Click="BtnClearHistory_Clck" FontSize="15">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <TextBlock>Clear<LineBreak/>History
+            </TextBlock>
+        </Button>
+        <Button x:Name="btnSqrt" Grid.Row="6" Grid.Column="1" Click="BtnSqrt_Click" FontSize="30">√
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+       
+        <Button x:Name="btnSquare" Grid.Row="5" Grid.Column="1" Click="BtnSquare_Click" FontSize="30" >²
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="btnPrct" Grid.Row="6" Grid.Column="0" Click="BtnPrct_Click" FontSize="20">%
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
 
-        <Button x:Name="btnDiv" Grid.Row="2" Grid.Column="5" Click="BtnDiv_Click" FontSize="50">÷</Button>
-        <Button x:Name="btnMul" Grid.Row="3" Grid.Column="5" Click="BtnMul_Click" FontSize="40">x</Button>
-        <Button x:Name="btnSub" Grid.Row="4" Grid.Column="5" Click="BtnSub_Click" FontSize="50">-</Button>
-        <Button x:Name="btnPlus" Grid.Row="5" Grid.Column="5" Click="BtnPlus_Click" FontSize="50">+</Button>
-        <Button x:Name="btnEqu" Grid.Row="6" Grid.Column="5" Click="BtnEqu_Click" FontSize="50">=</Button>
-        <Button x:Name="btnCom" Grid.Row="6" Grid.Column="4" Click="BtnCom_Click" FontSize="30">,</Button>
-        <Button x:Name="btnPosNeg" Grid.Row="6" Grid.Column="2" Click="BtnPosNeg_Click" FontSize="30">+/-</Button>
+        <Button x:Name="btnDiv" Grid.Row="2" Grid.Column="5" Click="BtnDiv_Click" FontSize="50">÷
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="btnMul" Grid.Row="3" Grid.Column="5" Click="BtnMul_Click" FontSize="40">x
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnSub" Grid.Row="4" Grid.Column="5" Click="BtnSub_Click" FontSize="50">-
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnPlus" Grid.Row="5" Grid.Column="5" Click="BtnPlus_Click" FontSize="50">+
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnEqu" Grid.Row="6" Grid.Column="5" Click="BtnEqu_Click" FontSize="50">=
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnCom" Grid.Row="6" Grid.Column="4" Click="BtnCom_Click" FontSize="30">,
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="btnPosNeg" Grid.Row="6" Grid.Column="2" Click="BtnPosNeg_Click" FontSize="30">+/-
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="Turquoise" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
         <TextBox x:Name="txtDisplay" IsReadOnly="True"  TextAlignment="Right" VerticalAlignment="Bottom" FontSize="30" BorderThickness="0"
-                     Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Background="AliceBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned"></TextBox>
+                     Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Background="LightPink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned"></TextBox>
 
         <TextBox x:Name="TopDisplay" IsReadOnly="True"  TextAlignment="Right" VerticalAlignment="Bottom" FontSize="20" BorderThickness="0"
-                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Background="AliceBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned"></TextBox>
+                     Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Background="LightPink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned"></TextBox>
 
-        <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="2"
-                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="5" Background="LightBlue" Foreground="YellowGreen" TextChanged="txtDisplay_TextChagned" Height="335"></TextBox>
+        <TextBox x:Name="HistoryText" IsReadOnly="True"  TextAlignment="Right" VerticalAlignment="Top" FontSize="10" BorderThickness="0"
+                     Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned"> ←History</TextBox>
 
+
+        <Expander ExpandDirection="Down" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" IsExpanded="True">
+            <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="4" Width="130" BorderBrush="Black"
+                      Background="Pink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned" Height="315"></TextBox>
+        </Expander>
+        
     </Grid>
 
 </Window>

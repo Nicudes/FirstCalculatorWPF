@@ -26,23 +26,25 @@ namespace Calculator
             InitializeComponent();            
         }
 
+        List<String> history = new List<string>();
+
         private decimal num1 = 0;
         private decimal num2 = 0;
         bool plusButtonClicked = false;
         bool minusButtonClicked = false;
         bool multiplyButtonClicked = false;
         bool divideButtonClicked = false;
-        int equalClick = 0;
+        bool equalClick = false;
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
         {
       
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "1";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "1";
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -55,13 +57,13 @@ namespace Calculator
         private void Btn2_Click(object sender, RoutedEventArgs e)
         {
          
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "2";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "2";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -74,13 +76,13 @@ namespace Calculator
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
             
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "3";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "3";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -93,13 +95,13 @@ namespace Calculator
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
         
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "4";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "4";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -113,13 +115,13 @@ namespace Calculator
         private void Btn5_Click(object sender, RoutedEventArgs e)
         {
          
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "5";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "5";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -131,13 +133,13 @@ namespace Calculator
         private void Btn6_Click(object sender, RoutedEventArgs e)
         {
       
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "6";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "6";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -149,13 +151,13 @@ namespace Calculator
         private void Btn7_Click(object sender, RoutedEventArgs e)
         {
          
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "7";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "7";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -168,13 +170,13 @@ namespace Calculator
         private void Btn8_Click(object sender, RoutedEventArgs e)
         {
          
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "8";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "8";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -187,13 +189,13 @@ namespace Calculator
         private void Btn9_Click(object sender, RoutedEventArgs e)
         {
      
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "9";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "9";
 
-                equalClick = 0;
+                equalClick = false;
             }
             else
             {
@@ -205,13 +207,13 @@ namespace Calculator
         private void Btn0_Click(object sender, RoutedEventArgs e)
         {
         
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 TopDisplay.Text += "0";
                 txtDisplay.Text = "";
                 txtDisplay.Text += "0";
 
-                equalClick = 0;
+                equalClick = false;
             }
            else
             {
@@ -219,7 +221,7 @@ namespace Calculator
                 TopDisplay.Text += "0";
 
             }
-            if (decimal.Parse(txtDisplay.Text) == 0)
+            if (decimal.Parse(txtDisplay.Text) == 0 & !txtDisplay.Text.Contains(","))
             {
                 txtDisplay.Text = "0";
                 TopDisplay.Text = "0";
@@ -259,7 +261,7 @@ namespace Calculator
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            if (equalClick >= 1)
+            if (equalClick == true)
             {
                 txtHistory.Text += "";
                 txtDisplay.Text = "0";
@@ -383,44 +385,45 @@ namespace Calculator
             if (plusButtonClicked == true)
               {
                   num2 = num1 + decimal.Parse(txtDisplay.Text);
-                  txtDisplay.Text = num2.ToString();
-                txtHistory.Text += TopDisplay.Text + " = " + num2.ToString();
-                txtHistory.Text += "\n";
+                txtDisplay.Text = num2.ToString();
+                history.Add(TopDisplay.Text + " = " + num2.ToString());
                 TopDisplay.Text = "";
-
                 num1 = 0;
               }
              else if (minusButtonClicked == true)
              {
                 num2 = num1 - decimal.Parse(txtDisplay.Text);
                 txtDisplay.Text = num2.ToString();
-                txtHistory.Text += TopDisplay.Text + " = " + num2.ToString();
-                txtHistory.Text += "\n";
+                history.Add(TopDisplay.Text + " = " + num2.ToString());
                 TopDisplay.Text = "";
-
                 num1 = 0;
             }
              else if (multiplyButtonClicked == true)
              {
                 num2 = num1 * decimal.Parse(txtDisplay.Text);
                 txtDisplay.Text = num2.ToString();
-                txtHistory.Text += TopDisplay.Text + " = " + num2.ToString();
-                txtHistory.Text += "\n";
+                history.Add(TopDisplay.Text + " = " + num2.ToString());
                 TopDisplay.Text = "";
-
                 num1 = 0;
             }
              else if (divideButtonClicked == true)
              {
                 num2 = num1 / decimal.Parse(txtDisplay.Text);
                 txtDisplay.Text = num2.ToString();
-                txtHistory.Text += TopDisplay.Text + " = " + num2.ToString();
-                txtHistory.Text += "\n";
+                history.Add(TopDisplay.Text + " = " + num2.ToString());
                 TopDisplay.Text = "";
-
                 num1 = 0;
+
             }
-            equalClick += 1;
+
+            txtHistory.Text = "";
+
+            foreach (string i in history)
+            {
+                txtHistory.Text += i;
+                txtHistory.Text += "\n";
+            }
+            equalClick = true;
 
         }
 
@@ -458,11 +461,11 @@ namespace Calculator
                 }
                 else if (decimal.Parse(txtDisplay.Text) >= 0)
                 {
-                    if (equalClick >= 1)
+                    if (equalClick == true)
                     {
                         txtDisplay.Text = "-";
                         TopDisplay.Text = "-";
-                        equalClick = 0;
+                        equalClick = false;
                     }
                     else
                     {
@@ -493,38 +496,82 @@ namespace Calculator
 
         private void BtnSqrt_Click(object sender, RoutedEventArgs e)
         {
-           double x = double.Parse(txtDisplay.Text);
-           x =  Math.Sqrt(x);
+            try
+            {
+                double x = double.Parse(txtDisplay.Text);
+                double y = double.Parse(txtDisplay.Text);
+                x = Math.Sqrt(x);
 
-            txtDisplay.Text = x.ToString();
-            TopDisplay.Text = x.ToString();
+                txtDisplay.Text = x.ToString();
+                TopDisplay.Text = x.ToString();
+                history.Add("√" + y.ToString() + "=" + x.ToString());
+                txtHistory.Text = "";
 
-            txtHistory.Text += "√" + x.ToString() + " = " + txtDisplay.Text;
-            txtHistory.Text += "\n";
+                foreach (string i in history)
+                {
+                    txtHistory.Text += i;
+                    txtHistory.Text += "\n";
+                }
+                equalClick = true;
+            }
+            catch (Exception)
+            {
+
+            }
+        
         }
 
         private void BtnSquare_Click(object sender, RoutedEventArgs e)
         {
-            double x = double.Parse(txtDisplay.Text);
-            x = x * x;
+            try
+            {
+                double x = double.Parse(txtDisplay.Text);
+                double y = double.Parse(txtDisplay.Text);
+                x = x * x;
 
-            txtDisplay.Text = x.ToString();
-            TopDisplay.Text = x.ToString();
+                txtDisplay.Text = x.ToString();
+                TopDisplay.Text = x.ToString();
+                history.Add( y.ToString()+ "²" + "=" + x.ToString());
+                txtHistory.Text = "";
 
-            txtHistory.Text +=  x.ToString() + "² = " + txtDisplay.Text;
-            txtHistory.Text += "\n";
+                foreach (string i in history)
+                {
+                    txtHistory.Text += i;
+                    txtHistory.Text += "\n";
+                }
+    
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
 
         private void BtnPrct_Click(object sender, RoutedEventArgs e)
         {
-            double x = double.Parse(txtDisplay.Text);
+            try
+            {
+                double x = double.Parse(txtDisplay.Text);
+                double y = double.Parse(txtDisplay.Text);
+                x = x / 100;
 
-            x = x / 100;
-            txtDisplay.Text = x.ToString();
-            TopDisplay.Text = x.ToString();
+                txtDisplay.Text = x.ToString();
+                TopDisplay.Text = x.ToString();
+                history.Add(y.ToString() + "%" + "=" + x.ToString());
+                txtHistory.Text = "";
 
-            txtHistory.Text += x.ToString() + "% = " + txtDisplay.Text;
-            txtHistory.Text += "\n";
-        }
+                foreach (string i in history)
+                {
+                    txtHistory.Text += i;
+                    txtHistory.Text += "\n";
+                }
+
+            }
+            catch (Exception)
+            {
+
+            }
+            }
     }
 }
