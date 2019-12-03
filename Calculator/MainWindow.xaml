@@ -246,6 +246,28 @@
             </Button.Background>
         </Button>
 
+
+        <Button x:Name="btnUppTo" Grid.Row="4" Grid.Column="1" Click="btnUppTo_click" FontSize="30" Style="{DynamicResource RoundedButton}">^
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="PaleGoldenrod" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="yuanToSek" Grid.Row="4" Grid.Column="0" Click="yuanToSek_click" FontSize="15" Style="{DynamicResource RoundedButton}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0.2,0,0" Width="66">
+            <TextBlock>¥<LineBreak/>to<LineBreak/>SEK</TextBlock>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Pink" Offset="0"/>
+                    <GradientStop Color="PaleGoldenrod" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+          
+        </Button>
+
+
         <TextBox x:Name="txtDisplay" IsReadOnly="True"  TextAlignment="Right" VerticalAlignment="Bottom" FontSize="30" BorderThickness="0"
                      Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Background="LightPink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned"></TextBox>
 
@@ -256,7 +278,7 @@
                      Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned"> ←History</TextBox>
 
 
-        <Expander ExpandDirection="Down" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" IsExpanded="True">
+        <Expander ExpandDirection="Down" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" IsExpanded="False">
             <TextBox x:Name="txtHistory" IsReadOnly="True"  TextAlignment="Left" VerticalAlignment="Top" FontSize="15" BorderThickness="4" Width="125" BorderBrush="Black"
                       Background="Pink" Foreground="RoyalBlue" TextChanged="txtDisplay_TextChagned" Height="309"></TextBox>
         </Expander>

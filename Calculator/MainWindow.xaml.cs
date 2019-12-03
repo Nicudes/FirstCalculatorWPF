@@ -34,11 +34,13 @@ namespace Calculator
         bool minusButtonClicked = false;
         bool multiplyButtonClicked = false;
         bool divideButtonClicked = false;
+        bool uptoButtonClicked = false;
         bool equalClick = false;
+
 
         private void Btn1_Click(object sender, RoutedEventArgs e)
         {
-      
+           
             if (equalClick == true)
             {
                 TopDisplay.Text += "1";
@@ -215,20 +217,17 @@ namespace Calculator
 
                 equalClick = false;
             }
-           else
+
+            else
             {
                 txtDisplay.Text += "0";
                 TopDisplay.Text += "0";
-
             }
             if (decimal.Parse(txtDisplay.Text) == 0 & !txtDisplay.Text.Contains(","))
             {
                 txtDisplay.Text = "0";
-                TopDisplay.Text = "0";
             }
-
-
-
+        
         }
 
         private void BtnCE_Click(object sender, RoutedEventArgs e)
@@ -370,6 +369,7 @@ namespace Calculator
                 minusButtonClicked = false;
                 multiplyButtonClicked = false;
                 divideButtonClicked = false;
+              
             }
             catch (Exception)
             {
@@ -411,6 +411,20 @@ namespace Calculator
                 num2 = num1 / decimal.Parse(txtDisplay.Text);
                 txtDisplay.Text = num2.ToString();
                 history.Add(TopDisplay.Text + " = " + num2.ToString());
+                TopDisplay.Text = "";
+                num1 = 0;
+
+            }
+            else if (uptoButtonClicked == true)
+            {
+                double y;
+                double x; 
+
+                x = double.Parse(txtDisplay.Text);
+                
+                y = Math.Pow(Convert.ToDouble(num1), x);
+                txtDisplay.Text = y.ToString();
+                history.Add(TopDisplay.Text + " = " + y.ToString());
                 TopDisplay.Text = "";
                 num1 = 0;
 
@@ -483,6 +497,30 @@ namespace Calculator
             }
             
         }
+        private void btnUppTo_click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                num1 += decimal.Parse(txtDisplay.Text);
+                txtDisplay.Text = "";
+                TopDisplay.Text += "^";
+
+
+                plusButtonClicked = false;
+                minusButtonClicked = false;
+                multiplyButtonClicked = false;
+                divideButtonClicked = false;
+                uptoButtonClicked = true;
+            }
+            catch (Exception)
+            {
+
+                txtDisplay.Text = "";
+                TopDisplay.Text = "";
+            }
+
+        }
+
 
         private void txtDisplay_TextChagned(object sender, TextChangedEventArgs e)
         {
@@ -573,5 +611,31 @@ namespace Calculator
 
             }
             }
+
+        private void yuanToSek_click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double x = double.Parse(txtDisplay.Text);
+                double y = double.Parse(txtDisplay.Text);
+                x = y * 1.55;
+
+                txtDisplay.Text = x.ToString();
+                TopDisplay.Text = x.ToString();
+                history.Add("Yuan to Sek\n" + y.ToString() + "=" + x.ToString());
+                txtHistory.Text = "";
+
+                foreach (string i in history)
+                {
+                    txtHistory.Text += i;
+                    txtHistory.Text += "\n";
+                }
+                equalClick = true;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }
